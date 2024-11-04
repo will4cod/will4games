@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+body {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  z-index: 2;
+}
+
+.navbar ul {
+  height: 100%;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  padding-top: 150px;
+  list-style-type: none;
+}
+
+.navbar ul li {
+  height: 60px;
+  width: 60px;
+  margin-top: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 30px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.navbar ul li:hover > a {
+  color: #ff471a;
+}
+
+.navbar ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  box-shadow: 0 0 7px #000 inset;
+  border-radius: 50px;
+}
+
+.navbar ul li a::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 80px;
+  top: -10px;
+  background: #333;
+  color: #fff;
+  border-radius: 50px;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  display: none;
+}
+.navbar ul li::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: -30px;
+  top: 13px;
+  background: #333;
+  transform: rotateZ(45deg);
+  display: none;
+}
+.navbar ul li:hover::after {
+  display: block;
+}
+.navbar ul li:hover a::after {
+  display: block;
+}
+
+.jogos-lista {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* overflow-y: scroll; */
+  /* background-color: red; */
+}
+
+.jogos-lista .jogos-titulo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  margin: 1rem 0;
+  background: #1a1a1a;
+}
+
+.jogos-lista .jogos-titulo h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.jogos-lista .jogos-titulo p {
+  color: #ccc;
+  /* width: 30ch; */
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.jogos-lista .jogos-titulo .info-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.jogos-lista .jogos-titulo .info-image img {
+  display: block;
+  width: 100%;
+  max-width: 110px;
+  align-self: flex-end;
+}
+
+.jogos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+
+.jogos-container .jogo {
+  max-width: 380px;
+  position: relative;
+}
+
+.jogos-container .jogo a img {
+  display: block;
+  max-width: 100%;
+}
+
+.jogos-container .jogo a:hover p {
+  padding: 1.3rem;
+}
+
+.jogos-container .jogo p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  font-size: 1.7rem;
+  padding: 1rem;
+  background: #1a1a1a;
+  color: #ea36fb;
+  border-radius: 10px 0 0 0;
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    height: 60px;
+    width: 100%;
+  }
+  .navbar ul {
+    height: 70px;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar ul li a::after {
+    top: -75px;
+    left: -8px;
+  }
+  .navbar ul li::after {
+    top: -25px;
+    left: 20px;
+  }
+  .navbar ul li:nth-child(5) a::after {
+    left: -70px;
+  }
+}
