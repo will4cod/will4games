@@ -1,0 +1,82 @@
+#navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  z-index: 3;
+}
+
+#navbar ul {
+  height: 100%;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  padding-top: 150px;
+  list-style-type: none;
+}
+
+#navbar ul li {
+  height: 60px;
+  width: 60px;
+  margin-top: 5px;
+  text-align: center;
+  position: relative;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 30px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+#navbar ul li:hover > a {
+  color: #ff471a;
+}
+
+#navbar ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  box-shadow: 0 0 7px #000 inset;
+  border-radius: 50px;
+}
+
+#navbar ul li a::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 80px;
+  top: -10px;
+  background: #333;
+  color: #fff;
+  border-radius: 50px;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  display: none;
+}
+#navbar ul li::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: -30px;
+  top: 13px;
+  background: #333;
+  transform: rotateZ(45deg);
+  display: none;
+}
+#navbar ul li:hover::after {
+  display: block;
+}
+#navbar ul li:hover a::after {
+  display: block;
+}
