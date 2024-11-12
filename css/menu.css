@@ -80,3 +80,26 @@
 #navbar ul li:hover a::after {
   display: block;
 }
+
+@media (max-width: 550px) {
+  .navbar {
+    height: 60px;
+    width: 100%;
+  }
+  .navbar ul {
+    height: 70px;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar ul li a::after {
+    top: -75px;
+    left: -8px;
+  }
+  .navbar ul li::after {
+    top: -25px;
+    left: 20px;
+  }
+  .navbar ul li:nth-child(5) a::after {
+    left: -70px;
+  }
+}

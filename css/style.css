@@ -62,15 +62,26 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  flex-flow: row-reverse;
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: 2rem auto;
   position: relative;
 }
 
 .jogos-container .jogo {
   max-width: 380px;
   position: relative;
+}
+
+.jogos-container .jogo:last-child::after {
+  content: url(../images/new.png);
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: -22px;
+  left: -8px;
 }
 
 .jogos-container .jogo a img {
@@ -96,27 +107,4 @@ body {
   color: #ea36fb;
   border-radius: 10px 0 0 0;
   transition: all 0.2s linear;
-}
-
-@media (max-width: 550px) {
-  .navbar {
-    height: 60px;
-    width: 100%;
-  }
-  .navbar ul {
-    height: 70px;
-    width: 100%;
-    padding: 0;
-  }
-  .navbar ul li a::after {
-    top: -75px;
-    left: -8px;
-  }
-  .navbar ul li::after {
-    top: -25px;
-    left: 20px;
-  }
-  .navbar ul li:nth-child(5) a::after {
-    left: -70px;
-  }
 }
