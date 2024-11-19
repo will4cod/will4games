@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Jump</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <audio src="./images/jumpaudio.mp3" id="jumpAudio"></audio>
+
+    <div class="game-board">
+        <section class="menu">
+            <h1>Mario Jump</h1>
+
+            <div>
+                <h2>Como jogar:</h2>
+                <p>Aperte qualquer tecla do teclado para fazer o mario pular, precisa pular pelos obstaculos a frente
+                </p>
+            </div>
+
+
+            <button onclick="iniciarJogo()">Play </button>
+
+            <audio autoplay loop class="audioPlayer">
+                <source src="./images/music.mp3">
+            </audio>
+        </section>
+
+        <section class="restart">
+
+            <h1>Game over</h1>
+
+            <p class="restart__pontos">0</p>
+
+            <button class="restart__button" onclick="restartJogo()"><i class='bx bx-refresh'></i></button>
+        </section>
+
+        <h3 class="ponto">0</h3>
+        <img src="./images/nuvens.gif" alt="nuvens" class="nuvens">
+        <img src="./images/mario.gif" alt="mario" class="mario">
+        <img src="./images/pipe.png" alt="pipe" class="pipe">
+    </div>
+
+    <script src="../../script/add-menu.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

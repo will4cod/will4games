@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    max-width: 1100px;
+    min-width: 800px;
+    height: 500px;
+    border: 5px solid rgb(35, 160, 35);
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.ponto{
+    font-family: 'Rubik Iso', cursive;
+    font-size: 3rem;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
+.nuvens{
+    position: absolute;
+    top: 10px;
+    width: 170px;
+    animation: clouds-animation 32s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    transform: rotateY(180deg);
+    margin-bottom: -16px;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+
+.menu{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: lightgreen;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: 'Rubik Iso', cursive;
+
+    background-image: url('../images/paisagem.png');
+    background-size: cover;
+
+}
+
+@keyframes saidaMenu {
+    0%{
+        bottom: 0;
+    }
+
+    10%{
+        bottom: 10%;
+    }
+
+    20%{ 
+        bottom: 0;
+    }
+
+    100%{
+        bottom: 100%;
+    }
+}
+
+.off{
+    display: none;
+}
+
+.menu h1{
+    font-size: 4em;
+}
+
+.menu div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu button{
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: lightcoral;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.menu button:hover{
+    color: green;
+    background-color: lightcoral;
+    box-shadow: 0px 2px 23px 2px rgba(0,0,0,0.75);
+}
+
+.restart{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+    background-image: url('../images/background\ montranha.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+    display: none;
+}
+
+.restart h1{
+    font-size: 4em;
+}
+
+.restart__pontos{
+    font-family: 'Rubik Iso', cursive;
+    font-size: 4rem;
+}
+
+.restart__button{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(255, 20, 20);
+    border-radius: 5px;
+    border: 1px solid red;
+    outline: none;
+    cursor: pointer;
+}
+
+.restart__button .bx-refresh{
+    font-size: 3em;
+}

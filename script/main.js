@@ -5,7 +5,7 @@ const jogos = ["mario-jump", "memory-game"];
 Array.from(jogos).forEach((jogo) => {
   jogosContainer.innerHTML += `
         <div class="jogo">
-            <a href="./jogos/${jogo}/index.html">
+            <a href="./jogos/${jogo}/game.html">
                 <img src="./jogos/${jogo}/capa.png" alt="capa">
                 <p>${jogo}</p>
             </a>
