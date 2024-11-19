@@ -2,7 +2,7 @@ const body = document.querySelector("body");
 
 function home() {
   console.log(window.location);
-  window.location.replace(window.location.origin);
+  window.location.replace("https://will4cod.github.io/will4games/");
 }
 
 const navbar = `
