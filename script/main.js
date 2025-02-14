@@ -1,6 +1,6 @@
 const jogosContainer = document.querySelector(".jogos-container");
 
-const jogos = ["mario-jump", "memory-game"];
+const jogos = ["mario-jump", "memory-game", "jogo-velha"];
 
 Array.from(jogos).forEach((jogo) => {
   jogosContainer.innerHTML += `
