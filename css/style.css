@@ -28,6 +28,7 @@ body {
   width: 80%;
   margin: 1rem auto;
   background: #1a1a1a;
+  position: relative;
 }
 
 .jogos-lista .jogos-titulo h1 {
@@ -107,4 +108,19 @@ body {
   color: #ea36fb;
   border-radius: 10px 0 0 0;
   transition: all 0.2s linear;
+}
+
+@media (max-width: 910px) {
+  .jogos-lista .jogos-titulo {
+    grid-template-columns: 1fr;
+  }
+  .info-image {
+    position: absolute;
+    opacity: 0.2;
+    right: 10%;
+    top: 10%;
+  }
+  .jogos-container {
+    flex-direction: column-reverse;
+  }
 }

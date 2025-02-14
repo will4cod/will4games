@@ -81,25 +81,26 @@
   display: block;
 }
 
-@media (max-width: 550px) {
-  .navbar {
+@media (max-width: 600px) {
+  #navbar {
     height: 60px;
     width: 100%;
+    background: red;
   }
-  .navbar ul {
+  #navbar ul {
     height: 70px;
     width: 100%;
     padding: 0;
   }
-  .navbar ul li a::after {
+  #navbar ul li a::after {
     top: -75px;
     left: -8px;
   }
-  .navbar ul li::after {
+  #navbar ul li::after {
     top: -25px;
     left: 20px;
   }
-  .navbar ul li:nth-child(5) a::after {
+  #navbar ul li:nth-child(5) a::after {
     left: -70px;
   }
 }
